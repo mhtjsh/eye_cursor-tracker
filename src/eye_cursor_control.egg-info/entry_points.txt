@@ -1,0 +1,2 @@
+[console_scripts]
+eye-cursor = eye_cursor.cli:main

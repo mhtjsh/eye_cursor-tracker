@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eye-cursor-control"
+version = "0.1.0"
+description = "Local laptop-webcam eye cursor prototype"
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+  "joblib>=1.3",
+  "mediapipe>=0.10.14",
+  "numpy>=1.26,<2.0",
+  "opencv-contrib-python>=4.9,<4.12",
+  "pyautogui>=0.9.54",
+  "pynput>=1.7",
+  "scikit-learn>=1.4",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+]
+onnx = [
+  "onnxruntime>=1.18",
+]
+server = [
+  "onnx>=1.16",
+  "torch>=2.2",
+]
+
+[project.scripts]
+eye-cursor = "eye_cursor.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
