@@ -1,5 +1,7 @@
 # Eye Cursor Control
 
+There is *NO .venv* import that from local and then start trainig.
+
 Local Windows eye-to-cursor prototype using a laptop webcam.
 
 This project is built for the practical setup we discussed:
